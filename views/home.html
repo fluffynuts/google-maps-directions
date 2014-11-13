@@ -1,0 +1,27 @@
+<div>
+    <div class="row">
+        <div class="span6">
+            <label>From</label>
+        </div>
+        <div class="span6">
+            <input type="text" data-ng-model="from" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="span6">
+            <label>To</label>
+        </div>
+        <div class="span6">
+            <input type="text" data-ng-model="to" />
+        </div>
+    </div>
+    <div class="row">
+        <button data-ng-enabled="enabled" data-ng-click="getDirections()">Get directions...</button>
+    </div>
+    <div class="row">
+        <div data-ng-repeat="step in steps">
+            <div class="row" data-ng-bind-html="to_trusted(step.html_instructions)">
+            </div>
+        </div>
+    </div>
+</div>
